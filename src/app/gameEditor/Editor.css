@@ -1,0 +1,17 @@
+.image_el_overlayer:hover {
+    background-color: rgba(200,200,200,0.3);
+}
+.image_el_overlayer:focus {
+    background-color: rgba(200,200,200,0.3);
+}
+.image_el_overlayer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+.image_el_wrapper{
+    position: relative;
+}
