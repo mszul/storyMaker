@@ -1,0 +1,8 @@
+.option_table {
+    border: 1px solid rgb(210, 210, 210);
+    margin-top: 1em;
+}
+.option_table th {
+    background-color: rgb(240, 240, 240);
+
+}

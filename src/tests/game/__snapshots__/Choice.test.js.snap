@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Choice component tests Choice should render correctly 1`] = `
+exports[`Choice component tests Render is ok 1`] = `
 <div>
   <button
     onClick={[Function]}

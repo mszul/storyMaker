@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameBoard tests Should render correctly 1`] = `
+<div
+  class="container"
+  id="game_screen"
+>
+  <div
+    id="game_image"
+  >
+    <img
+      height="400"
+      src="someImage.jpg"
+      width="600"
+    />
+    <div>
+      some story here
+    </div>
+    <div>
+      <div>
+        <button
+          onClick={[Function]}
+        >
+          Option 
+          A
+        </button>
+        Option1
+      </div>
+      <div>
+        <button
+          onClick={[Function]}
+        >
+          Option 
+          B
+        </button>
+        Option2
+      </div>
+      <div>
+        <button
+          onClick={[Function]}
+        >
+          Option 
+          C
+        </button>
+        Option3
+      </div>
+    </div>
+  </div>
+</div>
+`;

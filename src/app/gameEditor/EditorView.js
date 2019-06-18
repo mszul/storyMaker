@@ -8,7 +8,10 @@ export default class EditorView extends Component {
         super(props)
         this.state = {
             currentScreen: {
+                id: '',
                 name: '',
+                imgSrc: '',
+                options: []
             },
             lastIndex: 1,
             screens: []
@@ -37,7 +40,8 @@ export default class EditorView extends Component {
         screens.push({
             "id": uuidv1(),
             "name": "New Screen " + this.state.lastIndex,
-           
+            "imgSrc": "",
+            "options": []
         })
         this.setState({
             screens: screens,
@@ -55,6 +59,7 @@ export default class EditorView extends Component {
                 </div>
                 <div className="col-8 p-4">
                     <ScreenForm 
+                        key={'screenform_'+this.state.currentScreen.id}
                         screen={this.state.currentScreen}  
                         onSave={(screen) => this.updateScreen(screen)}
                     />

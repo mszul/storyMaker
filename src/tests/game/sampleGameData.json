@@ -1,0 +1,49 @@
+{
+	"startScreen": "1",
+	"screens" : [
+		{
+			"id": "1",
+			"description": "some story here",
+			"imageSrc": "someImage.jpg",
+			"options": [
+				{
+					"id": "A",
+					"description": "Option1",
+					"targetScreenId": "2"
+				},
+				{
+					"id": "B",
+					"description": "Option2",
+					"targetScreenId": "2"
+				},
+				{
+					"id": "C",
+					"description": "Option3",
+					"targetScreenId": "2"
+				}
+			]
+		},
+			{
+			"id": "2",
+			"description": "some other story here",
+			"imageSrc": "Some other file.jpg",
+			"options": [
+				{
+					"id": "A",
+					"description": "Option4",
+					"targetScreenId": "1"
+				},
+				{
+					"id": "B",
+					"description": "Option5",
+					"targetScreenId": "1"
+				},
+				{
+					"id": "C",
+					"description": "Option6",
+					"targetScreenId": "1"
+				}
+			]
+		}
+	]
+}

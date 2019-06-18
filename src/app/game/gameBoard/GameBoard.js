@@ -34,11 +34,11 @@ class GameBoard extends Component {
     const options = this.state.currentScreen.hasOwnProperty("options") ? this.state.currentScreen.options : []
     const choices = [];
     for(let option of options){
-        choices.push((<Choice id={option.id} description={option.description} onClick={() => this.setCurrentScreen(option.targetScreenId)}></Choice>))
+        choices.push((<Choice key={'Choice_'+option.id} id={option.id} description={option.description} onClick={() => this.setCurrentScreen(option.targetScreenId)}></Choice>))
     }
     return(<div id="game_screen" class="container"> 
         <div id="game_image">
-           <img src={imageSrc} width="600" height="400"></img>
+           <img alt="screen_image" src={imageSrc} width="600" height="400"></img>
            <div>
              {description}
            </div>

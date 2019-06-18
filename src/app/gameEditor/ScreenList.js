@@ -12,11 +12,13 @@ export default class ScreenList extends Component {
             screenView.push(  
                     <ImageElement 
                         key={'screen_elem_'+ screen.id} 
-                        title={screen.name} 
-                        imageSrc={process.env.PUBLIC_URL + '/icons/no-image-icon.png'}
                         onClick={() => this.selectScreen(screen)}
+                        imageSrc={screen.imgSrc}
                         >
-                        Modification Date: {date}
+                        <div>
+                            <div>{screen.name}</div>
+                            <div>Modification Date: {date}</div>
+                        </div>
                     </ImageElement>   
             )
         }
