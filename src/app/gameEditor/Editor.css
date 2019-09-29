@@ -15,3 +15,17 @@
 .image_el_wrapper{
     position: relative;
 }
+
+.nav-link
+{
+    font-family: 'Lato', sans-serif;
+    color:black !important;
+    font-size: 22px;
+    margin: 0px;
+}
+
+.nav-link:hover
+{
+    color:grey !important;
+}
+

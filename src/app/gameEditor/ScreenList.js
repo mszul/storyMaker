@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import ImageElement from '../components/ImageElement.js'
 
 export default class ScreenList extends Component {
-    selectScreen(screen){
-        this.props.onScreenChanged(screen)
-    }
+
     render() {
         let screenView = []
         for(let screen of this.props.screens) {
@@ -12,7 +10,7 @@ export default class ScreenList extends Component {
             screenView.push(  
                     <ImageElement 
                         key={'screen_elem_'+ screen.id} 
-                        onClick={() => this.selectScreen(screen)}
+                        onClick={() => this.props.onScreenChanged(screen)}
                         imageSrc={screen.imgSrc}
                         >
                         <div>
