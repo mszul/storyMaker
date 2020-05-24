@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ImageForm from '../components/ImageForm.js'
+import ImageForm from '../common/ImageForm.js'
 import OptionList from './optionList/OptionList.js'
 import uuidv1 from 'uuid/v1'
 
@@ -24,7 +24,7 @@ export default class ScreenForm extends Component {
     handleOnSave () {
         this.props.onSave(this.state.screen)
     }
-    updateScreenIcon (imgSrc) { 
+    updateScreenIcon (imgSrc) {
         let screen = Object.assign({}, this.state.screen);
         screen.imgSrc = imgSrc
         this.updateScreen(screen)
@@ -52,7 +52,7 @@ export default class ScreenForm extends Component {
     removeOption (option) {
         let screen = Object.assign({}, this.state.screen);
         const index = screen.options.findIndex(o => o.id === option.id)
-        let options = screen.options.slice() 
+        let options = screen.options.slice()
         options.splice(index,1)
         screen.options = options
         this.updateScreen(screen)
@@ -66,25 +66,24 @@ export default class ScreenForm extends Component {
                              imgSrc={this.state.screen.imgSrc}
                         />
                     </div>
-                     <div className="form-group">                
+                     <div className="form-group">
                          <label htmlFor="title_input">Title</label>
-                         <input 
-                            type="text" 
-                            id="title_input" 
-                            className="form-control" 
+                         <input
+                            type="text"
+                            id="title_input"
+                            className="form-control"
                             value={this.state.screen.name}
                             onChange={this.handleChangeTitle.bind(this)} />
                      </div>
-                     <OptionList 
+                     <OptionList
                         options={this.state.screen.options}
                         onOptionAdd={() => this.addOption()}
                         onRemoveOption={(option) => this.removeOption(option)}
                         onOptionChange={(option) => this.handleChangeOption(option)}
                       />
-                     <button type="button" onClick={() => this.handleOnSave()}>Save</button>                  
+                     <button type="button" onClick={() => this.handleOnSave()}>Save</button>
                 </form>
-                
+
         )
     }
 }
-

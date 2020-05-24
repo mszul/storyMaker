@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import ImageElement from '../components/ImageElement.js'
+import ImageElement from '../common/ImageElement.js'
 
 export default class ScreenList extends Component {
 
     render() {
-        let screenView = []
-        for(let screen of this.props.screens) {
+        const screenView = []
+        const screens = this.props.screens ? this.props.screens : []
+        for(let screen of screens) {
             let date =  new Date().toLocaleDateString("en-US")
-            screenView.push(  
-                    <ImageElement 
-                        key={'screen_elem_'+ screen.id} 
+            screenView.push(
+                    <ImageElement
+                        key={'screen_elem_'+ screen.id}
                         onClick={() => this.props.onScreenChanged(screen)}
                         imageSrc={screen.imgSrc}
                         >
@@ -17,7 +18,7 @@ export default class ScreenList extends Component {
                             <div>{screen.name}</div>
                             <div>Modification Date: {date}</div>
                         </div>
-                    </ImageElement>   
+                    </ImageElement>
             )
         }
         return (

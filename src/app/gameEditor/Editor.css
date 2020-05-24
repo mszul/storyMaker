@@ -10,7 +10,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 2;
 }
 .image_el_wrapper{
     position: relative;
@@ -29,3 +29,13 @@
     color:grey !important;
 }
 
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0.5;
+  background-color: rgb(200,200,200);
+}
